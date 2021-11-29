@@ -2,7 +2,7 @@
 
 A simple app written in Go to display the latest Proton releases (Valve Software compatibility tool for Linux).
 
-This app checks the repositories for Proton and Proton-ge-custom (GloriousEggroll) and displays their current versions, release dates, and download links to STDOUT.
+This app checks the repositories for Proton and Proton-ge-custom (GloriousEggroll) and displays their current versions, release dates, and download links to stdout.
 
 ## Build and Installation
 
