@@ -19,3 +19,9 @@ This is a MVP for a simple check of Proton versions, there are no configuration 
 [Proton](https://github.com/ValveSoftware/Proton/)
 
 [Proton GE](https://github.com/GloriousEggroll/proton-ge-custom)
+
+## Acknowledgments
+
+Thank you to Valve Software and GloriousEggroll for creating/customizing such great software.
+
+Special thank you to Tom Lebreux for the code review and suggestions.
