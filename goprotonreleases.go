@@ -21,19 +21,19 @@ func getReleaseInfo(url string) (ReleaseInfo, error) {
 
 	resp, err := http.Get(url)
 	if err != nil {
-		return release, errors.New("Error - cannot retrieve release url")
+		return release, errors.New("cannot retrieve release url")
 	}
 	defer resp.Body.Close()
 
 	body, err := io.ReadAll(resp.Body)
 	if err != nil {
-		return release, errors.New("Error - cannot read response body")
+		return release, errors.New("cannot read response body")
 	}
 
 	errJson := json.Unmarshal([]byte(body), &release)
 
 	if errJson != nil {
-		return release, errors.New("Error - cannot unmarshal json")
+		return release, errors.New("cannot unmarshal json")
 	}
 
 	return release, nil
@@ -52,14 +52,19 @@ func main() {
 	for _, url := range urlArray {
 		release, err := getReleaseInfo(url)
 		if err != nil {
-			fmt.Println(err)
+			fmt.Println("Error -",err)
 			break;
 		}
 
-		fmt.Println(string(colorBlue), release.Name, "(", release.TagName, ")")
-		publishDateTime, _ := time.Parse(time.RFC3339, release.PublishDate)
-		fmt.Println(string(colorCyan), "Released on", publishDateTime.Format("Jan-02-2006"))
-		fmt.Println(string(colorCyan), release.Url)
-		fmt.Println(string(colorReset))
+		publishDateTime, err := time.Parse(time.RFC3339, release.PublishDate)
+		if err != nil {
+			fmt.Println("Error -", err)
+			break;
+		}
+
+		fmt.Println(colorBlue, release.Name, "(", release.TagName, ")")
+		fmt.Println(colorCyan, "Released on", publishDateTime.Format("Jan-02-2006"))
+		fmt.Println(colorCyan, release.Url)
+		fmt.Println(colorReset)
 	}
 }
