@@ -6,9 +6,9 @@ This app checks the repositories for Proton and Proton-ge-custom (GloriousEggrol
 
 ## Build and Installation
 
-For build from source, download the source code and build using Go (`go build goprotonreleases.go`).
+To build, download the source code and build using Go (`go build goprotonreleases.go`).
 
-For Linux binary release, download the latest version from Releases, uncompress, and run.
+To download and run the Linux binary, get the latest .tar.gz from Releases, uncompress, and run.
 
 ## Configuration
 
