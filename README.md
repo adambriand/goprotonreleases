@@ -2,17 +2,19 @@
 
 A simple app written in Go to display the latest Proton releases (Valve Software compatibility tool for Linux).
 
-This app checks the repositories for Proton and Proton-ge-custom (GloriousEggroll), then displays their latest tagged release,  date of the release, and download links to stdout.
+This app checks the repositories for Proton and Proton-ge-custom (GloriousEggroll), then displays their latest tagged release,  date of the release, and download link.
 
 ## Build and Installation
 
 To build, download the source code and build using Go (`go build goprotonreleases.go`).
 
-To run the Linux binary directly, get the latest .tar.gz from Releases, uncompress, and run.
+To install the Linux binary directly, download the latest `.tar.gz` file from Releases and uncompress.
 
-## Configuration
+## Usage
 
-This is a MVP for a simple display of current Proton versions, there are no configuration options currently.
+This is a MVP for a simple display of current Proton versions, there are no configuration options. Run `goprotonreleases` and the results will display on stdout.
+
+Want to stay up to date on your Proton releases? Why not add it to your `.bashrc`.
 
 ## References
 
