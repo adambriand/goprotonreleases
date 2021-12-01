@@ -6,8 +6,8 @@ This app checks the repositories for Proton and Proton-ge-custom (GloriousEggrol
 
 ## Build and Installation
 
-To build, download the source code and build using Go (`go build goprotonreleases.go`).
-
+To build, download the source code and build using Go (`go build goprotonreleases.go`). If you do not have GLIBC 2.32 installed you can compile it with `CGO_ENABLED=0 go build goprotonreleases.go`.
+ 
 To install the Linux binary directly, download the latest `.tar.gz` file from Releases and uncompress.
 
 ## Usage
